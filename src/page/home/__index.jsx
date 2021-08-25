@@ -10,7 +10,6 @@ import PerfoChart from '../../component/PerfoChart';
 import Score from '../../component/Score';
 import CardList from '../../component/CardList';
 
-
 class Home extends Component
 {
     constructor(props)
@@ -19,7 +18,7 @@ class Home extends Component
         this.state = {data : {}, avgSession: {}, activity: {}, perf:{}};   
     }
     componentDidMount()
-    {      
+    {
         service(12, 0).then(response =>
             {
                 this.setState({ data : response.data.data })
@@ -29,12 +28,10 @@ class Home extends Component
         {
             this.setState({ activity : response.data.data })
         }).catch(e => console.error("Can't fetch activity data from service"))
-
         service(12, 2).then(response =>
             {
                 this.setState({ avgSession : response.data.data })
         }).catch(e => console.error("Can't fetch  average session data from service"))
-        
         service(12, 3).then(response =>
         {
                 this.setState({ perf : response.data.data })

@@ -19,13 +19,11 @@ const CustomTooltip = ({ active, payload}) => {
 class ActivityChart extends React.Component{
     render()
     {
-        if (this.props.activity.sessions)
-        {
-            this.data = this.props.activity.sessions
-        }
+      const {sessions} = this.props.activity
+
         return (
             <ResponsiveContainer className="Activity" width={"100%"} height={"100%"}>
-                <BarChart   data={this.data}>
+                <BarChart   data={sessions}>
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis tickLine={false} dataKey="day" stroke="#9B9EAC" tickFormatter={(data)=> data && +(data.slice(-2))} />
                     <YAxis dataKey="calories" orientation="right" axisLine={false} tickLine={false}/>

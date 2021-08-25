@@ -1,0 +1,5 @@
+ {
+    "baseUrl" : "http://localhost",
+    "dataPath" : "/user/",
+    "port" : 3000
+}

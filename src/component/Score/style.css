@@ -4,9 +4,14 @@
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-area: 3 / 3 / span 1 / span 1;
+  color: black;
 }
 
 .Score tspan {
   width: 100%;
+}
+
+.Score_pourcent {
+  color: red;
 }
 /*# sourceMappingURL=style.css.map */

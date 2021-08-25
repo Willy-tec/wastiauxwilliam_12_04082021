@@ -1,6 +1,10 @@
 .Score{
   grid-area: 3 / 3 / span 1 / span 1;
+  color: black;
   & tspan{
     width: 100%;
+  }
+  &_pourcent {
+    color:red;
   }
 }

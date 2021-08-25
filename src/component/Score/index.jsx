@@ -2,12 +2,11 @@ import React from 'react';
 import './style.css';
 import { ResponsiveContainer, RadialBarChart, RadialBar, Legend } from 'recharts';
 
-const renderLegend = (props) => {
+const renderLegend = (props) =>
+{
     const { payload } = props;
-    payload.length && console.log(payload[0].payload)
     return (
-        payload.length && <p className="Score_legend"><span className="Score">{payload[0].payload.todayScore*100}%</span> de votre objectif</p>
-
+        payload.length && <><p className="Score_pourcent">{payload[0].payload.todayScore*100}%</p><p className="Score_legend"> de votre objectif</p></>
 
     );
   }
@@ -33,7 +32,7 @@ class Score extends React.Component{
                         dataKey="todayScore"
                     >
                 </RadialBar>
-                        <Legend content={renderLegend} width={100} wrapperStyle={{ top: 60, right: 50, textAlign:'center', backgroundColor: '#00f5f500', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '18px' }} > allo</Legend>
+                <Legend content={renderLegend} width={"50%"} wrapperStyle={{ top: "50%", right: "25%", textAlign:'center', border: 'none', borderRadius: 3, lineHeight: '18px', color:"#000000" }} > </Legend>
                 </RadialBarChart>
                 
             </ResponsiveContainer> 
@@ -43,3 +42,5 @@ class Score extends React.Component{
 }
 
 export default Score;
+
+// 

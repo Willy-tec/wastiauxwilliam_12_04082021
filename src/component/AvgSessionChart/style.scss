@@ -1,0 +1,12 @@
+.AvgSession{
+    grid-area: 3 / 1 / span 1/ span 1;
+    background-color: #FF0000;
+    border-radius: .5rem;
+    & .custom-tooltip{
+        & .label{
+            background-color: #FFFFFF;
+            color: black;
+            padding: 1rem;
+        }
+    }
+}

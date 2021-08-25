@@ -1,14 +1,23 @@
 .Home {
+  position: absolute;
   width: 100%;
   height: 100%;
 }
 
 .Home_Content {
-  width: calc(100% - 11.7rem - 2rem);
-  height: calc(100% - 9.1rem - 2rem);
-  padding: 1rem;
+  width: calc(100% - 11.7rem - 10rem);
+  height: calc(100% - 9.1rem - 10rem);
+  padding: 5rem;
   position: absolute;
   bottom: 0;
   right: 0;
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr;
+  color: #8884d8;
 }
 /*# sourceMappingURL=style.css.map */

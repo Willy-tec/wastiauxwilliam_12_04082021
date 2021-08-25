@@ -1,0 +1,8 @@
+.Activity{
+    grid-area: 2 / 1  / span 1 /span 3;
+    & .custom-tooltip {
+        background-color: #E60000;
+        padding: 1rem;
+        color: white;
+    }
+}

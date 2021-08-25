@@ -1,1 +1,17 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.PerfoChart {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 2 / span 1 / span 1;
+  width: 100%;
+  background-color: #282D30;
+  border-radius: .5rem;
+  color: white;
+}
+
+.PerfoChart tspan {
+  font-size: 1.2rem;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

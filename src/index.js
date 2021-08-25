@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './page/home'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 console.clear()
 
@@ -12,9 +12,13 @@ ReactDOM.render(
       <Route path="/">
         <Home />
       </Route>
+      <Route path="/user/:id">
+        
+      </Route>
       
     </Router>
     
   </React.StrictMode>,
   document.getElementById('root')
 );
+

@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.Activity {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: 2 / 1  / span 1 /span 3;
+}
+
+.Activity .custom-tooltip {
+  background-color: #E60000;
+  padding: 1rem;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

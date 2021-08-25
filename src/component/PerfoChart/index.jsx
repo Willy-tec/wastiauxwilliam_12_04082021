@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import {RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend} from 'recharts';
+import {RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer} from 'recharts';
 
 class PerfoChart extends React.Component
 {
@@ -14,17 +14,21 @@ class PerfoChart extends React.Component
     {
         if (this.props.perf.data)
         {
-            this.data = this.props.perf
-            this.data.data.map(el => el.kindName = this.props.perf.kind[el.kind])
+            this.props.perf.data.map(el => el.kindName = this.props.perf.kind[el.kind])
         }
         return (
-            <RadarChart outerRadius={90} width={730} height={250} data={this.props.perf.data}>
-                <PolarGrid />
-                <PolarAngleAxis dataKey="kindName" />
-                <PolarRadiusAxis angle={30} domain={[0, 200]} />
-                <Radar name="Mike" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-                <Legend />
-            </RadarChart>
+            <> {
+                this.props.perf ?
+                    <ResponsiveContainer width={"100%"} height={"100%"} className="PerfoChart">
+                        <RadarChart outerRadius="60%"   data={this.props.perf.data}>
+                            <PolarGrid radialLines={false}/>
+                            <PolarAngleAxis dataKey="kindName" stroke="#FFFFFF"/>
+                            <Radar  dataKey="value" stroke="#FF0101B2" fill="#FF0101B2" fillOpacity={1} />
+                        </RadarChart>
+                    </ResponsiveContainer>
+                 : "Loading"
+        }
+        </>
         )
     }
 }

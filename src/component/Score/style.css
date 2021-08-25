@@ -1,0 +1,12 @@
+.Score {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.Score tspan {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */

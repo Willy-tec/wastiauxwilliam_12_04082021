@@ -1,0 +1,63 @@
+.CardInfo {
+  background-color: #FBFBFB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: .5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.CardInfo_logo {
+  width: 6rem;
+  height: 6rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: .6rem;
+}
+
+.CardInfo_logo.carbs {
+  background-color: #f9ce231a;
+}
+
+.CardInfo_logo.proteine {
+  background-color: rgba(74, 184, 255, 0.1);
+}
+
+.CardInfo_logo.lipide {
+  background-color: rgba(253, 81, 129, 0.1);
+}
+
+.CardInfo_logo.calorie {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.CardInfo_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  font-size: 2rem;
+}
+
+.CardInfo_text_number {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

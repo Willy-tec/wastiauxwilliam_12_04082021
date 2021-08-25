@@ -1,7 +1,20 @@
 import React from 'react';
 import './style.css';
-import { LineChart, Line,XAxis } from 'recharts';
+import { LineChart, Line,XAxis, ResponsiveContainer, Tooltip } from 'recharts';
 const jour = ["", "L", "M", "M", "J", "V", "S", "D"]
+
+const CustomTooltip = ({ active, payload}) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="custom-tooltip">
+          <p className="label">{`${payload[0].value} min`}</p>
+        </div>
+      );
+    }
+  
+    return null;
+  };
+
 class AvgSessionChart extends React.Component
 {
     render()
@@ -11,14 +24,14 @@ class AvgSessionChart extends React.Component
             this.data = this.props.avgSession.sessions
             this.data.map(el => el.jour = jour[el.day] )
         }
-        
         return (
-            <div>
-                <LineChart width={400} height={400} data={this.data}>
-                    <XAxis dataKey="jour" />
-                    <Line type="monotone" dataKey="sessionLength" stroke="#8884d8" />
+            <ResponsiveContainer width={"100%"} height={"100%"} className="AvgSession">
+                <LineChart data={this.data}>
+                    <XAxis dataKey="jour" axisLine={ false }tickLine={false} stroke="#ffffff"/>
+                    <Tooltip content={CustomTooltip} formatter={(value, name, props) => [`${value}`, "hello"]  }/>
+                    <Line dot={false} activeDot={{ r: 2 }} type="natural" dataKey="sessionLength" stroke="#FFFFFF" />
                 </LineChart>
-            </div>
+            </ResponsiveContainer>
         )
     }
 }

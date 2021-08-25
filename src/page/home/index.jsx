@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import Nav from '../../component/nav';
 import Header from '../../component/header';
 import service from '../../service'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import RadarChart from '../../component/AvgSessionChart';
 import AvgSessionChart from '../../component/AvgSessionChart';
 import ActivityChart from '../../component/ActivityChart';
 import PerfoChart from '../../component/PerfoChart';
+import Score from '../../component/Score';
+import CardList from '../../component/CardList';
 
 class Home extends Component
 {
@@ -25,7 +25,6 @@ class Home extends Component
             })
         service(12, 1).then(response =>
         {
-            //BarChart
             this.setState({ activity : response.data.data })
         })
         service(12, 2).then(response =>
@@ -34,15 +33,12 @@ class Home extends Component
         })
         service(12, 3).then(response =>
         {
-            //RadarChart
                 this.setState({ perf : response.data.data })
         })
         
     }
     render()
     {
-       // console.log("perf", this.state.perf)
-       // console.log("data", this.state.data)
         return (
             <div className='Home'>
                 <Nav />
@@ -50,7 +46,9 @@ class Home extends Component
                     <Header userInfos={this.state.data.userInfos} />
                     <AvgSessionChart avgSession={this.state.avgSession} />
                     <ActivityChart activity={this.state.activity} />
-                    <PerfoChart perf={this.state.perf}/>
+                    <PerfoChart perf={this.state.perf} />
+                    <Score data={this.state.data}/>
+                    <CardList data = {this.state.data.keyData} />
                 </div>
 
             </div>

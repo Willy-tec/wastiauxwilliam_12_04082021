@@ -1,1 +1,16 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.AvgSession {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 1 / span 1/ span 1;
+  background-color: #FF0000;
+  border-radius: .5rem;
+}
+
+.AvgSession .custom-tooltip .label {
+  background-color: #FFFFFF;
+  color: black;
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

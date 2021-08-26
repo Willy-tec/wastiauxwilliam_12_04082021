@@ -14,25 +14,30 @@ class Score extends React.Component{
     render()
     {
         this.score = [];
+        const { data } = this.props;
         let triche = {
             todayScore: 1,
             fill: "#ffffff00"
         }
-        if (this.props.data.todayScore)
+        data.score && (data.todayScore = data.score)
+        if (data.todayScore )
         {
-            this.score.push(this.props.data)
+            this.score.push(data)
             this.score.push(triche)
         }
         return (
             <ResponsiveContainer width="100%" height="100%" className="Score">
-                <RadialBarChart cx="50%" cy="50%" innerRadius="60%" outerRadius="80%" barSize={50} data={this.score}>
+                <RadialBarChart fill="#ffffff" cx="50%" cy="50%" innerRadius="60%" outerRadius="80%" barSize={50} data={this.score}>
                 <RadialBar 
                         cornerRadius = {"50%"}
                         clockWise
                         dataKey="todayScore"
+                        fill="#ff0000"
+                        startAngle={180}
+                        endAngle={190}
                     >
                 </RadialBar>
-                <Legend content={renderLegend} width={"50%"} wrapperStyle={{ top: "50%", right: "25%", textAlign:'center', border: 'none', borderRadius: 3, lineHeight: '18px', color:"#000000" }} > </Legend>
+                <Legend content={renderLegend} width={"50%"} wrapperStyle={{ top: "37.5%", right: "25%", textAlign:'center', border: 'none', borderRadius: 3, lineHeight: '18px', color:"#000000" }} > </Legend>
                 </RadialBarChart>
                 
             </ResponsiveContainer> 

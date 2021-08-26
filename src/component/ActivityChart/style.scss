@@ -1,7 +1,9 @@
-.Activity{
-    grid-area: 2 / 1  / span 1 /span 3;
+.Activity {
+    grid-area: 2 / 1 / span 1 / span 3;
+    background-color: #fbfbfb;
+    border-radius: 0.5rem;
     & .custom-tooltip {
-        background-color: #E60000;
+        background-color: #e60000;
         padding: 1rem;
         color: white;
     }

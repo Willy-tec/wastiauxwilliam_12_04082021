@@ -13,7 +13,7 @@ ReactDOM.render(
         <Home />
       </Route>
       <Route path="/user/:id">
-        
+      <Home />
       </Route>
       
     </Router>

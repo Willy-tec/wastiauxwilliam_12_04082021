@@ -4,7 +4,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     gap: 10rem;
-
     @media (min-width: 0px) and (max-width: 1024px) {
         gap: 1rem;
     }

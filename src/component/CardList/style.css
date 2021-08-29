@@ -19,9 +19,15 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media (min-width: 1024px) and (max-height: 1024px) {
   .CardList {
     gap: 3rem;
+  }
+}
+
+@media (min-width: 1440px) and (min-height: 1024px) {
+  .CardList {
+    gap: 10rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

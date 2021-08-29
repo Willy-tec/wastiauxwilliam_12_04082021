@@ -1,6 +1,12 @@
 proptype
 jsdoc
+0.711 / 0.762
 
+        min-width: 79.9rem;
+        max-width: 112.4rem;
+        min-height: 46.3rem;
+        max-height: 60.8rem;
+        margin: auto;
 
 # Getting Started with Create React App
 

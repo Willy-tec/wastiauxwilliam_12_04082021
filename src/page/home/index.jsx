@@ -1,7 +1,6 @@
 import './style.css';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import Nav from '../../component/nav';
 import Header from '../../component/header';
 import service from '../../service';
 import AvgSessionChart from '../../component/AvgSessionChart';
@@ -50,7 +49,6 @@ class Home extends Component {
     render() {
         return (
             <div className="Home">
-                <Nav />
                 <div className="Home_Content">
                     <Header userInfos={this.state.data.userInfos} />
                     <AvgSessionChart avgSession={this.state.avgSession} />

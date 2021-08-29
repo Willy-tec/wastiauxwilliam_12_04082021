@@ -1,5 +1,11 @@
- {
-    "baseUrl" : "http://localhost",
-    "dataPath" : "/user/",
-    "port" : 3000
-}
+[
+    {
+        "baseUrl": "http://localhost",
+        "dataPath": "/user/",
+        "port": 3000
+    },
+    {
+        "baseUrl": "https://sport-ap.herokuapp.com",
+        "dataPath": "/user/"
+    }
+]

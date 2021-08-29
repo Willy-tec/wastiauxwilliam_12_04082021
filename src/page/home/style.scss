@@ -1,16 +1,21 @@
-.Home{
-    position: absolute;
+.Home {
     width: 100%;
     height: 100%;
-    &_Content{
-        width: calc(100% - 11.7rem - 10rem);
-        height: calc(100% - 9.1rem - 10rem);
-        padding: 5rem;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+    grid-area: 2 / 2;
+    display: grid;
+    place-items: center;
+    box-sizing: content-box;
+    &_Content {
         display: grid;
-        gap: 3rem;
+        gap: 10rem;
+        @media (min-width: 0px) and (max-width: 1024px) {
+            gap: 1rem;
+        }
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            gap: 3rem;
+        }
+        width: 90%;
+        height: 90%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto 1fr 1fr;
         color: #000000;

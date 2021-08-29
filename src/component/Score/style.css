@@ -5,8 +5,10 @@
   -ms-grid-column-span: 1;
   grid-area: 3 / 3 / span 1 / span 1;
   color: black;
-  background-color: #fbFBFB;
-  border-radius: .5rem;
+  background-color: #fbfbfb;
+  border-radius: 0.5rem;
+  min-width: 18.3rem;
+  min-height: 20rem;
 }
 
 .Score tspan {

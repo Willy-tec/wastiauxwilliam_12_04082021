@@ -1,10 +1,14 @@
-.AvgSession{
-    grid-area: 3 / 1 / span 1/ span 1;
-    background-color: #FF0000;
-    border-radius: .5rem;
-    & .custom-tooltip{
-        & .label{
-            background-color: #FFFFFF;
+.AvgSession {
+    grid-area: 3 / 1 / span 1 / span 1;
+    background-color: #ff0000;
+    border-radius: 0.5rem;
+    min-width: 18.3rem;
+    // max-width: 25.8rem;
+    min-height: 20rem;
+    // max-height: 26.3rem;
+    & .custom-tooltip {
+        & .label {
+            background-color: #ffffff;
             color: black;
             padding: 1rem;
         }

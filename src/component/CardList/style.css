@@ -10,6 +10,18 @@
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 10rem;
+}
+
+@media (min-width: 0px) and (max-width: 1024px) {
+  .CardList {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .CardList {
+    gap: 3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

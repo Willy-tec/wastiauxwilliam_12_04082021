@@ -1,5 +1,5 @@
 .CardInfo {
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,9 +9,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 100%;
   height: 100%;
+  min-width: 18.3rem;
+  min-height: 8.8rem;
 }
 
 .CardInfo_logo {
@@ -20,7 +22,7 @@
   display: -ms-grid;
   display: grid;
   place-items: center;
-  border-radius: .6rem;
+  border-radius: 0.6rem;
 }
 
 .CardInfo_logo.carbs {

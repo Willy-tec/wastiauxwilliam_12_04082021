@@ -2,6 +2,10 @@
     grid-area: 2 / 1 / span 1 / span 3;
     background-color: #fbfbfb;
     border-radius: 0.5rem;
+    min-height: 24.4rem;
+    // max-height: 32rem;
+    min-width: 59.4rem;
+    // max-width: 83.5rem;
     & .custom-tooltip {
         background-color: #e60000;
         padding: 1rem;

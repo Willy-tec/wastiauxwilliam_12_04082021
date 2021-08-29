@@ -1,24 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './page/home'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Home from './page/home';
+import Nav from './component/nav';
 
-console.clear()
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+console.clear();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Route path="/">
-        <Home />
-      </Route>
-      <Route path="/user/:id">
-      <Home />
-      </Route>
-      
-    </Router>
-    
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Router>
+            <Nav />
+            <Switch>
+                <Route path="/">
+                    <Home />
+                </Route>
+                <Route path="/user/:id">
+                    <Home />
+                </Route>
+            </Switch>
+        </Router>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
-

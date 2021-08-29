@@ -23,6 +23,11 @@ const CustomTooltip = ({ active, payload }) => {
 
     return null;
 };
+const style = {
+    right: '0',
+    lineHeight: '24px',
+    padding: '10px',
+};
 
 class ActivityChart extends React.Component {
     render() {
@@ -34,8 +39,12 @@ class ActivityChart extends React.Component {
                 width={'100%'}
                 height={'100%'}
             >
-                <BarChart data={sessions}>
-                    <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                <BarChart data={sessions} label="LAbel">
+                    <CartesianGrid
+                        label="LAbel"
+                        strokeDasharray="3 3"
+                        vertical={false}
+                    />
                     <XAxis
                         tickLine={false}
                         dataKey="day"
@@ -55,6 +64,7 @@ class ActivityChart extends React.Component {
                         margin="0 0 10px 0"
                         iconSize={8}
                         iconType="circle"
+                        wrapperStyle={style}
                     />
                     <Bar
                         dataKey="kilogram"

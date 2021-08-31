@@ -10,6 +10,7 @@ import {
     Bar,
     ResponsiveContainer,
 } from 'recharts';
+import service from '../../service';
 
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -30,9 +31,24 @@ const style = {
 };
 
 class ActivityChart extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activity: {},
+        };
+    }
+    componentDidMount() {
+        service(this.props.userId, 1)
+            .then((response) => {
+                this.setState({ activity: response.data.data });
+            })
+            .catch((e) =>
+                console.error("Can't fetch activity data from service")
+            );
+    }
     render() {
-        const { sessions } = this.props.activity;
-
+        const { sessions } = this.state.activity;
+        console.log('Activity Chart render');
         return (
             <ResponsiveContainer
                 className="Activity"

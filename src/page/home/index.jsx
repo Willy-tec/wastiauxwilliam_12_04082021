@@ -12,7 +12,13 @@ import CardList from '../../component/CardList';
 class Home extends Component {
     constructor(props) {
         super(props);
-        this.state = { data: {}, avgSession: {}, activity: {}, perf: {} };
+        this.state = {
+            data: {},
+            avgSession: {},
+            activity: {},
+            perf: {},
+            userId: 12,
+        };
     }
     componentDidMount() {
         let userId = 12;
@@ -21,39 +27,17 @@ class Home extends Component {
                 this.setState({ data: response.data.data });
             })
             .catch((e) => console.error("Can't fetch data from service"));
-
-        service(userId, 1)
-            .then((response) => {
-                this.setState({ activity: response.data.data });
-            })
-            .catch((e) =>
-                console.error("Can't fetch activity data from service")
-            );
-
-        service(userId, 2)
-            .then((response) => {
-                this.setState({ avgSession: response.data.data });
-            })
-            .catch((e) =>
-                console.error("Can't fetch  average session data from service")
-            );
-
-        service(userId, 3)
-            .then((response) => {
-                this.setState({ perf: response.data.data });
-            })
-            .catch((e) =>
-                console.error("Can't fetch performance data from service")
-            );
     }
     render() {
+        console.log('home render');
+        const { userId } = this.state;
         return (
             <div className="Home">
                 <div className="Home_Content">
                     <Header userInfos={this.state.data.userInfos} />
-                    <AvgSessionChart avgSession={this.state.avgSession} />
-                    <ActivityChart activity={this.state.activity} />
-                    <PerfoChart perf={this.state.perf} />
+                    <AvgSessionChart userId={userId} />
+                    <ActivityChart userId={userId} />
+                    <PerfoChart userId={userId} />
                     <Score data={this.state.data} />
                     <CardList data={this.state.data.keyData} />
                 </div>

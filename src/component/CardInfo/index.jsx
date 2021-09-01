@@ -4,6 +4,7 @@ import calorie from '../../asset/calorie.svg';
 import carbs from '../../asset/carbs.svg';
 import lipide from '../../asset/lipide.svg';
 import protein from '../../asset/protein.svg';
+import PropTypes from 'prop-types';
 
 class CardInfo extends Component {
     render() {
@@ -51,5 +52,8 @@ class CardInfo extends Component {
         );
     }
 }
-
+CardInfo.propTypes = {
+    type: PropTypes.string,
+    value: PropTypes.number,
+};
 export default CardInfo;

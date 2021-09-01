@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import service from '../../service';
+import PropTypes from 'prop-types';
 
 import {
     RadarChart,
@@ -34,7 +35,6 @@ class PerfoChart extends React.Component {
             perf: { data },
         } = this.state;
         data && data.map((el) => (el.kindName = perf.kind[el.kind]));
-
         return (
             <ResponsiveContainer
                 width={'100%'}
@@ -55,5 +55,9 @@ class PerfoChart extends React.Component {
         );
     }
 }
+
+PerfoChart.propTypes = {
+    userId: PropTypes.number,
+};
 
 export default PerfoChart;

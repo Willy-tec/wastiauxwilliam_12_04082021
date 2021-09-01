@@ -17,11 +17,11 @@ class Home extends Component {
             avgSession: {},
             activity: {},
             perf: {},
-            userId: 12,
+            userId: +props?.match?.params?.userId || 12,
         };
     }
     componentDidMount() {
-        let userId = 12;
+        const { userId } = this.state;
         service(userId, 0)
             .then((response) => {
                 this.setState({ data: response.data.data });
@@ -29,7 +29,6 @@ class Home extends Component {
             .catch((e) => console.error("Can't fetch data from service"));
     }
     render() {
-        console.log('home render');
         const { userId } = this.state;
         return (
             <div className="Home">
@@ -46,6 +45,6 @@ class Home extends Component {
     }
 }
 Home.propTypes = {
-    name: PropTypes.string,
+    userId: PropTypes.number,
 };
 export default Home;

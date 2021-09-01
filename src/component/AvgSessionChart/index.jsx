@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './style.css';
 import { LineChart, Line, XAxis, ResponsiveContainer, Tooltip } from 'recharts';
 import service from '../../service';
@@ -37,7 +38,6 @@ class AvgSessionChart extends React.Component {
     render() {
         const { sessions } = this.state.avgSession;
         sessions && sessions.map((el) => (el.jour = jour[el.day]));
-        console.log('AvgSessionChart render');
 
         return (
             <ResponsiveContainer
@@ -86,5 +86,7 @@ class AvgSessionChart extends React.Component {
         );
     }
 }
-
+AvgSessionChart.propTypes = {
+    userId: PropTypes.number,
+};
 export default AvgSessionChart;

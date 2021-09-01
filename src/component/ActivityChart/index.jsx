@@ -11,6 +11,7 @@ import {
     ResponsiveContainer,
 } from 'recharts';
 import service from '../../service';
+import PropTypes from 'prop-types';
 
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -48,7 +49,6 @@ class ActivityChart extends React.Component {
     }
     render() {
         const { sessions } = this.state.activity;
-        console.log('Activity Chart render');
         return (
             <ResponsiveContainer
                 className="Activity"
@@ -101,5 +101,7 @@ class ActivityChart extends React.Component {
         );
     }
 }
-
+ActivityChart.propTypes = {
+    userId: PropTypes.number,
+};
 export default ActivityChart;

@@ -6,8 +6,6 @@ import Nav from './component/nav';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-console.clear();
-
 ReactDOM.render(
     <React.StrictMode>
         <Router>

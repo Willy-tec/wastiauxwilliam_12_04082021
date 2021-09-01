@@ -13,10 +13,11 @@ ReactDOM.render(
         <Router>
             <Nav />
             <Switch>
+                <Route
+                    path="/user/:userId"
+                    render={(props) => <Home {...props} />}
+                ></Route>
                 <Route path="/">
-                    <Home />
-                </Route>
-                <Route path="/user/:id">
                     <Home />
                 </Route>
             </Switch>

@@ -29,6 +29,7 @@ const style = {
     right: '0',
     lineHeight: '24px',
     padding: '10px',
+    fontSize: '14px',
 };
 
 class ActivityChart extends React.Component {
@@ -50,54 +51,50 @@ class ActivityChart extends React.Component {
     render() {
         const { sessions } = this.state.activity;
         return (
-            <ResponsiveContainer
-                className="Activity"
-                width={'100%'}
-                height={'100%'}
-            >
-                <BarChart data={sessions} label="LAbel">
-                    <CartesianGrid
-                        label="LAbel"
-                        strokeDasharray="3 3"
-                        vertical={false}
-                    />
-                    <XAxis
-                        tickLine={false}
-                        dataKey="day"
-                        stroke="#9B9EAC"
-                        tickFormatter={(data) => data && +data.slice(-2)}
-                    />
-                    <YAxis
-                        dataKey="calories"
-                        orientation="right"
-                        axisLine={false}
-                        tickLine={false}
-                    />
-                    <Tooltip content={CustomTooltip} />
-                    <Legend
-                        align="right"
-                        verticalAlign="top"
-                        margin="0 0 10px 0"
-                        iconSize={8}
-                        iconType="circle"
-                        wrapperStyle={style}
-                    />
-                    <Bar
-                        dataKey="kilogram"
-                        name="Poids (kg)"
-                        fill="#282D30"
-                        radius={[10, 10, 0, 0]}
-                        barSize={7}
-                    />
-                    <Bar
-                        dataKey="calories"
-                        name="Calories brûlées (kCal)"
-                        fill="#E60000"
-                        radius={[10, 10, 0, 0]}
-                        barSize={7}
-                    />
-                </BarChart>
-            </ResponsiveContainer>
+            <div className="Activity">
+                <h3>Activité quotidienne</h3>
+                <ResponsiveContainer width={'100%'} height={'100%'}>
+                    <BarChart data={sessions}>
+                        <CartesianGrid strokeDasharray="3 3" vertical={false} />
+                        <XAxis
+                            tickLine={false}
+                            dataKey="day"
+                            stroke="#9B9EAC"
+                            tickFormatter={(data) => data && +data.slice(-2)}
+                        />
+                        <YAxis
+                            dataKey="calories"
+                            orientation="right"
+                            axisLine={false}
+                            tickLine={false}
+                        />
+                        <Tooltip content={CustomTooltip} />
+                        <Legend
+                            align="right"
+                            verticalAlign="top"
+                            margin="0 0 0px 0"
+                            iconSize={8}
+                            iconType="circle"
+                            wrapperStyle={style}
+                        />
+                        <Bar
+                            dataKey="kilogram"
+                            name="Poids (kg)"
+                            fill="#282D30"
+                            radius={[10, 10, 0, 0]}
+                            barSize={7}
+                        />
+                        <Bar
+                            dataKey="calories"
+                            name="Calories brûlées (kCal)"
+                            fill="#E60000"
+                            radius={[10, 10, 0, 0]}
+                            barSize={7}
+                        />
+                        <h3>Hello</h3>
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
         );
     }
 }

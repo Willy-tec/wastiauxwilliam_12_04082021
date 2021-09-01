@@ -8,11 +8,20 @@
   border-radius: 0.5rem;
   min-width: 18.3rem;
   min-height: 20rem;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
 }
 
 .AvgSession .custom-tooltip .label {
   background-color: #ffffff;
   color: black;
   padding: 1rem;
+}
+
+.AvgSession h3 {
+  color: #ffffff9f;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

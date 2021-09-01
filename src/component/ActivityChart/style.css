@@ -4,6 +4,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: 2 / 1 / span 1 / span 3;
+  position: relative;
   background-color: #fbfbfb;
   border-radius: 0.5rem;
   min-height: 24.4rem;
@@ -14,5 +15,13 @@
   background-color: #e60000;
   padding: 1rem;
   color: white;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.Activity h3 {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

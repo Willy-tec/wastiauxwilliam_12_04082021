@@ -3,14 +3,19 @@
     background-color: #ff0000;
     border-radius: 0.5rem;
     min-width: 18.3rem;
-    // max-width: 25.8rem;
     min-height: 20rem;
-    // max-height: 26.3rem;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1rem;
     & .custom-tooltip {
         & .label {
             background-color: #ffffff;
             color: black;
             padding: 1rem;
         }
+    }
+    & h3 {
+        color: #ffffff9f;
+        position: absolute;
     }
 }

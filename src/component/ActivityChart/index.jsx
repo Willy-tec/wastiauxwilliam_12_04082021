@@ -13,6 +13,13 @@ import {
 import service from '../../service';
 import PropTypes from 'prop-types';
 
+/**
+ * Construct the tooltip for the chart
+ * You can find how to use it here :
+ * @url https://recharts.org/en-US/guide/customize
+ * @param {Object} props
+ * @returns null
+ */
 const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
         return (
@@ -25,13 +32,19 @@ const CustomTooltip = ({ active, payload }) => {
 
     return null;
 };
+
+/**
+ * Define the style for the legend section
+ */
 const style = {
     right: '0',
     lineHeight: '24px',
     padding: '10px',
     fontSize: '14px',
 };
-
+/**
+ *  Get he dataset from the service API, and print it as a charts
+ */
 class ActivityChart extends React.Component {
     constructor(props) {
         super(props);

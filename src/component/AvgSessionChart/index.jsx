@@ -18,6 +18,10 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 class AvgSessionChart extends React.Component {
+    /**
+     * Initialise state
+     * @param {Object} props
+     */
     constructor(props) {
         super(props);
         this.state = {

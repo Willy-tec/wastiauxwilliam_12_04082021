@@ -10,7 +10,9 @@ import {
     Radar,
     ResponsiveContainer,
 } from 'recharts';
-
+/**
+ * Format the performance into charts, and render the component
+ */
 class PerfoChart extends React.Component {
     constructor(props) {
         super(props);

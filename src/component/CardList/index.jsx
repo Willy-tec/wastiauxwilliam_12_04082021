@@ -2,7 +2,9 @@ import { Component } from 'react';
 import CardInfo from '../CardInfo';
 import PropTypes from 'prop-types';
 import './style.css';
-
+/**
+ * format the list of card
+ */
 class CardList extends Component {
     render() {
         const { data } = this.props;

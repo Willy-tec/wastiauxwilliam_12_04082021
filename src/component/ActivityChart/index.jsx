@@ -43,7 +43,7 @@ const style = {
     fontSize: '14px',
 };
 /**
- *  Get he dataset from the service API, and print it as a charts
+ *  Get the dataset from the service API, and print it as a charts
  */
 class ActivityChart extends React.Component {
     constructor(props) {

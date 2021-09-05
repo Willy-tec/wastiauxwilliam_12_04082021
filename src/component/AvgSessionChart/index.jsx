@@ -16,7 +16,9 @@ const CustomTooltip = ({ active, payload }) => {
 
     return null;
 };
-
+/**
+ * Use this component for printing the average activity
+ */
 class AvgSessionChart extends React.Component {
     /**
      * Initialise state

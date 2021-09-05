@@ -4,7 +4,10 @@ import img_natation from '../../asset/natation.svg';
 import img_velo from '../../asset/velo.svg';
 import img_altere from '../../asset/altere.svg';
 import img_logo from '../../asset/logo.svg';
-
+/**
+ * Print the nav bar with link to every section (not yet implemented)
+ * @returns Component
+ */
 function Nav() {
     return (
         <div className="Nav">

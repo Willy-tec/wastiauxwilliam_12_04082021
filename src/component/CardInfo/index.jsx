@@ -5,7 +5,9 @@ import carbs from '../../asset/carbs.svg';
 import lipide from '../../asset/lipide.svg';
 import protein from '../../asset/protein.svg';
 import PropTypes from 'prop-types';
-
+/**
+ * Format and print the information of each card
+ */
 class CardInfo extends Component {
     render() {
         switch (this.props.type) {

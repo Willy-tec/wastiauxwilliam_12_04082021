@@ -1,6 +1,10 @@
 import './style.css';
 import PropTypes from 'prop-types';
-
+/**
+ * Format the header section containing the greetings
+ * @param {Object} props
+ * @returns Component
+ */
 function Header(props) {
     return (
         <div className="Header">

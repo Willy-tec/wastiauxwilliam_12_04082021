@@ -8,7 +8,9 @@ import ActivityChart from '../../component/ActivityChart';
 import PerfoChart from '../../component/PerfoChart';
 import Score from '../../component/Score';
 import CardList from '../../component/CardList';
-
+/**
+ * Main page of the application
+ */
 class Home extends Component {
     constructor(props) {
         super(props);

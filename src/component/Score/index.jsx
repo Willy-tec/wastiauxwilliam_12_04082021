@@ -7,7 +7,11 @@ import {
     Legend,
 } from 'recharts';
 import PropTypes from 'prop-types';
-
+/**
+ * Format the legend for recharts component.
+ * @param {Object} props
+ * @returns Legend
+ */
 const renderLegend = (props) => {
     const { payload } = props;
     return (
@@ -21,10 +25,14 @@ const renderLegend = (props) => {
         )
     );
 };
+/**
+ * Score component printing the activity percentage
+ */
 class Score extends React.Component {
     render() {
         this.score = [];
         const { data } = this.props;
+        // variable triche is used for scaling the charts. We hide it.
         let triche = {
             todayScore: 1,
             fill: '#ffffff00',

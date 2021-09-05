@@ -1,80 +1,62 @@
-proptype
-jsdoc
-0.711 / 0.762
+## prerequisites
 
-        min-width: 79.9rem;
-        max-width: 112.4rem;
-        min-height: 46.3rem;
-        max-height: 60.8rem;
-        margin: auto;
+-   react-app
 
-# Getting Started with Create React App
+-   react-dom
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-   react-router
 
-## Available Scripts
+-   react-script
 
-In the project directory, you can run:
+-   axios
 
-### `npm start`
+-   recharts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Clone the repo
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+run the following command to clone the depo
 
-### `npm test`
+> git clone https://github.com/Willy-tec/wastiauxwilliam_12_04082021.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+run the following command to install all the dependency
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Run the server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> npm start
 
-### `npm run eject`
+## Configuration for backend
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The backend server is actually hosted on heroku.app. The server can turn into pause mode, so, it's possible to take some time when you launch your app.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can use the backend server locally, but you will need to change a little bit in the service/index.js file
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+All you need to do is to clone the other project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+> git clone https://github.com/Willy-tec/p12_api_dashboard
 
-## Learn More
+Run :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+and
 
-### Code Splitting
+> npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+All the information about the api can be found on the depo, like endpoint and other things.
+[https://github.com/Willy-tec/p12_api_dashboard]
 
-### Analyzing the Bundle Size
+Be carrufull about the port.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The backend need to be on port 3000, and the front-end on another port.
 
-### Making a Progressive Web App
+in the service/index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+find the line(line 16) :
 
-### Advanced Configuration
+> const config = configArr[1]; // Define this number to 1 if you want to use heroku, or 0 if you want to use local
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The service actually load a json file containing an array with the url to use.

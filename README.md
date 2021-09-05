@@ -12,6 +12,12 @@
 
 -   recharts
 
+## Preview
+
+You can see the actual project here :
+
+https://sportify.pages.dev/
+
 ## Clone the repo
 
 run the following command to clone the depo

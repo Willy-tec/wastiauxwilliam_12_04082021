@@ -23,18 +23,22 @@ https://sportify.pages.dev/
 run the following command to clone the depo
 
 ```
-> git clone https://github.com/Willy-tec/wastiauxwilliam_12_04082021.git
+ git clone https://github.com/Willy-tec/wastiauxwilliam_12_04082021.git
 ```
 
 ## Installation
 
 run the following command to install all the dependency
 
-> npm install
+```
+ npm install
+```
 
 ## Run the server
 
-> npm start
+```
+ npm start
+```
 
 ## Configuration for backend
 
@@ -44,15 +48,21 @@ You can use the backend server locally, but you will need to change a little bit
 
 All you need to do is to clone the other project
 
-> git clone https://github.com/Willy-tec/p12_api_dashboard
+```
+git clone https://github.com/Willy-tec/p12_api_dashboard
+```
 
 Run :
 
-> npm install
+```
+npm install
+```
 
 and
 
-> npm start
+```
+npm start
+```
 
 All the information about the api can be found on the depo, like endpoint and other things.
 [https://github.com/Willy-tec/p12_api_dashboard]
@@ -65,6 +75,8 @@ in the service/index.js
 
 find the line(line 16) :
 
-> const config = configArr[1]; // Define this number to 1 if you want to use heroku, or 0 if you want to use local
+```javascript
+const config = configArr[1]; // Define this number to 1 if you want to use heroku, or 0 if you want to use local
+```
 
 The service actually load a json file containing an array with the url to use.

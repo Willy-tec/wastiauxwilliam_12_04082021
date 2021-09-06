@@ -22,7 +22,9 @@ https://sportify.pages.dev/
 
 run the following command to clone the depo
 
+```
 > git clone https://github.com/Willy-tec/wastiauxwilliam_12_04082021.git
+```
 
 ## Installation
 
